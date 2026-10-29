@@ -50,7 +50,7 @@ npm install -g markdownlint-cli
 pip install ansible-lint
 
 # detect-secrets (secret detection)
-pip install detect-secrets
+pip install 'detect-secrets==1.5.0'
 
 # shfmt (shell formatter)
 brew install shfmt  # macOS
@@ -256,8 +256,8 @@ markdownlint .
 # ansible-lint - check Ansible content
 ansible-lint
 
-# detect-secrets - scan for secrets
-detect-secrets scan
+# detect-secrets - read-only scan (does not rewrite .secrets.baseline)
+make check-secrets
 
 # shfmt - format shell scripts
 shfmt -w -i 2 -ci -bn .
